@@ -124,21 +124,4 @@ df = spark.read.parquet("path/to/parquet")
 ✔ Spark **solo necesita**:
 - Que el archivo sea **Parquet válido**
 - Metadatos correctos
-- Esquema consistente
-
----
-
-### 🎯 Mensaje clave para tu contenido (muy CaroData)
-
-> “No es Python vs Java vs R.  
-> Es **Parquet + Spark**.”
-
----
-
-Si quieres, el siguiente paso puede ser:
-- 🎥 guion para un **Reel explicando esto**
-- 📊 ejemplo leyendo **el mismo Parquet desde los 3**
-- 🧪 demo comparando **CSV vs Parquet**
-- 🧱 versión **Bronze → Silver → Gold**
-
-Dime y lo armamos 🔥
+- Esquema consistente 
