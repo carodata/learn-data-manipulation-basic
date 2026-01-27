@@ -11,7 +11,6 @@ public class ParquetExample {
                 .master("local[*]")
                 .getOrCreate();
 
-        // ===== Crear DataFrame =====
         Dataset<Row> df = spark.createDataFrame(
                 java.util.Arrays.asList(
                         new Person(1, "Alice", 25),
@@ -21,12 +20,11 @@ public class ParquetExample {
                 Person.class
         );
 
-        // ===== Escritura a Parquet =====
         df.write()
           .mode("overwrite")
           .parquet("example_parquet");
 
-        // ===== Lectura desde Parquet =====
+ 
         Dataset<Row> dfRead = spark.read()
                                    .parquet("example_parquet");
 
@@ -35,7 +33,6 @@ public class ParquetExample {
         spark.stop();
     }
 
-    // Clase auxiliar
     public static class Person {
         public int id;
         public String name;
